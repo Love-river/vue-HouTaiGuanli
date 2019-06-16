@@ -1,0 +1,148 @@
+- 用到的第三方库
+  - 前端
+    - element-ui
+    - dayjs
+    - axios
+    - mavon-editor(markdown编辑器)
+    - qs
+    - v-charts(vue图表库)
+    - vue-count-to(计数器)
+    - vue-image-crop-upload(图片上传)
+    - vue-json-excel(下载excel)
+    - koa-multer(图片上传)
+
+  - 后端
+    - koa-session(session存储)
+    - md5(加密)
+    - mongoose(操作数据库)
+    - svg-captcha(验证码)
+
+- 需求
+  - 注册
+    - 用户名不能重复
+    - 密码加密处理
+
+  - 登录
+    - 用户名，密码，验证码不能为空
+    - 用户名不存在，提示
+    - 验证码可以刷新
+    - 验证码存在session里面
+    - 登录之后，用户存在本地和session里面
+
+  - 首页
+    - 头部
+     - 记录显示用户
+
+     - 问好
+        - 如果早上6-12点，就提示早上好
+        - 如果早上12-2点，就提示中午好
+        - 如果下午2-6点，就提示下午好
+        - 如果晚上6-12点，就提示晚上好
+        - 如果凌晨12点-凌晨6点，就提示该睡觉了
+
+     - 计数器返回的数据
+        - New Visits:102,400
+        - Messages: 81,212
+        - Purchases: 9280
+        - Shoppings:13,600
+
+     - 折线图返回的数据
+        - 横坐标: Mon Tue Wed Thu Fri Sat Sun
+        - 纵坐标:
+          - expected: 141,actual: 81
+          - expected: 222,actual: 181
+          - expected: 41,actual: 33
+          - expected: 91,actual: 77
+          - expected: 221,actual: 102
+          - expected: 83,actual: 112
+          - expected: 188,actual: 141
+
+     - 雷达图返回的数据:
+        - 选项名称:
+          - Allocated Budget
+          - Expected Spending
+          - Actual Spending
+        - 每个选项对应的数据:
+          - name: 'Allocated Budget',
+            sales: 141,
+            ministration: 81,
+            techology: 32,
+            delelopmer: 67,
+            marketing: 98
+
+          - name: 'Expected Spending',
+            sales: 112,
+            ministration: 65,
+            techology: 57,
+            delelopmer: 32,
+            marketing: 109
+
+          - name: 'Actual Spending',
+            sales: 131,
+            ministration: 54,
+            techology: 43,
+            delelopmer: 77,
+            marketing: 53
+
+     - 饼图返回的数据:
+        - 选项名称：
+          - Industries: 141
+          - Technology: 137
+          - Forex: 87
+          - Gold: 131
+          - Forecasts: 99
+
+     - 柱状图返回的数据:
+        - 和折线图返回数据一样
+
+     - 表格返回的数据:
+        - Order_No: '4042b6Bb-Ef7E-5Ca2-9A5c-1F2b9e', price: '12,035.3',status: 0
+        - Order_No: 'db2FD0BB-03Eb-cB68-E47a-FB8f5A',price: '3,469.5',status: 0
+        - Order_No: 'e9E550AF-9712-f1CB-3Ed9-bd6b64',price: '3,380.5',status: 1
+        - Order_No: 'F5bD99d5-eA64-Cfad-A8fb-cFD3e4',price: '7,334.98',status: 1
+        - Order_No: '1BdE5d4A-fd26-3eB4-bD68-0d5ef1',price: '10,852.44',status: 0
+        - Order_No: 'DDA4dd0B-dB69-8eC9-f849-F91a8e',price: '5,335.32',status: 1
+        - Order_No: 'aeeC3425-0D70-b2eF-76B5-5298D2',price: '4,874.3',status: 1
+
+     - 一个完整的todolist
+        - 删除
+        - 已完成
+        - 未完成
+        - 全部
+        - 全选
+
+     - 分页表格
+        - 可以搜索
+        - 可以修改
+        - 可以删除
+        - 请求一个json文件
+
+     - 标签页
+        - 未读消息标记为已读，已读消息数量增加
+        - 已读消息删除，回收站的数量增加
+        - 清空回收站，所有数据为0
+        - 可以标记和删除全部
+        - 还原: 还原到已读消息
+
+     - 图片上传
+        - 第一种:element-ui自带的上传图片组件
+        - 第二种: vue-image-crop-upload上传图片
+
+     - 发布文章
+        - 文章标题
+        - 文章摘要
+        - 作者
+        - 类目
+        - 来源
+        - 重要性(写成星级组件)
+        - 发布时间
+        - 所有内容存入数据库
+        - 增加显示文章页面(显示数据库所有的文章)
+
+     - 导出excel
+        - 导出xls格式
+        - 导出csv格式
+
+     - 退出系统
+        - 清空本地存储
+        - 回到登录页
